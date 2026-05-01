@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingTop="8dp">
-
     <EditText
         android:id="@+id/etQrContent"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_note_input"
         android:hint="@string/common_qr_dialog_hint"
@@ -16,32 +15,21 @@
         android:padding="14dp"
         android:textColor="@color/text_primary"
         android:textColorHint="@color/text_hint"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:textSize="15sp" />
     <TextView
         android:id="@+id/tvQrTips"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/common_qr_dialog_tip"
         android:textColor="@color/text_secondary"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etQrContent" />
-
+        android:textSize="12sp" />
     <ImageView
         android:id="@+id/ivQrResult"
         android:layout_width="220dp"
         android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:contentDescription="@null"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvQrTips" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:scaleType="fitCenter" />
+</LinearLayout>
